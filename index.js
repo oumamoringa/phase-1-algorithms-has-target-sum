@@ -1,17 +1,29 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+const unseenNumbers = {};
+for (const number of array){
+    const solution = target -number;
+    if (solution in unseenNumbers) return true;
+      unseenNumbers[number]= true;
+}
+return false;
 }
 
-/* 
+
+/*
   Write the Big O time complexity of your function here
+  ------------------------------------------------------
+  *Runtime: 0(n^2)
 */
 
-/* 
+/*
   Add your pseudocode here
 */
 
 /*
   Add written explanation of your solution here
+  ---------------------------------------------
+  *create a hasTargetSum function
+  c*reate an empty array
 */
 
 // You can run `node index.js` to view these console logs
